@@ -1,0 +1,30 @@
+{
+	"name": "@nuogz/utility",
+	"version": "1.0.0",
+	"description": "simple utility library for node.js and browser",
+	"author": "Nuogz",
+	"license": "LGPL-3.0-or-later",
+	"main": "./index.node.js",
+	"browser": "./index.browser.js",
+	"type": "module",
+	"typesSource": [
+		"browser",
+		"node-mixin"
+	],
+	"repository": {
+		"type": "git",
+		"url": "github:nuogz/utility"
+	},
+	"files": [
+		"index.*.js",
+		"lib/**",
+		"src/**"
+	],
+	"engines": {
+		"node": ">=14.18.1"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"eslint": "^8.22.0"
+	}
+}
