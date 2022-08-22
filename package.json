@@ -15,7 +15,7 @@
 		"url": "github:nuogz/utility"
 	},
 	"files": [
-		"index.*.js",
+		"index.js",
 		"lib/**",
 		"src/**"
 	],
