@@ -1,17 +1,8 @@
 /**
- * - `undefined`, `null`, `"false"`, `false` would return `false`
- * - others would return `true`
+ * parse vaule to boolean when handle vue component props
  */
-const parseBoolAttr = value =>
-	(
-		value === undefined ||
-		value === null ||
-		value === false ||
-		(typeof value == 'string' && value.toLowerCase() == 'false')
-	)
-		? false
-		: true;
+const parseBoolProp = value => value === false ? false : true;
 
 
 
-export default parseBoolAttr;
+export default parseBoolProp;

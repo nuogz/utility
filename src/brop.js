@@ -1,7 +1,7 @@
 /**
- * used to convert data to switch like boolean property on HTML attribute
+ * used to convert data to switch like boolean HTML attribute
  */
-export const brop = value => value ? '' : null;
+export const brop = value => value ? '' : undefined;
 
 
 
