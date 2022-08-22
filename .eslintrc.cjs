@@ -22,7 +22,7 @@ if(typesSource.includes('browser')) {
 	rcSources.push({
 		files: ['src/**/*.js'],
 		excludedFiles: [],
-		env: { es2022: true, node: false, browser: true },
+		env: { es2022: true, node: true, browser: true },
 	});
 }
 

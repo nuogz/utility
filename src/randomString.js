@@ -1,6 +1,7 @@
 const dict = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 const sizeDict = dict.length;
 
+
 const randomString = (len = 32) => {
 	let result = '';
 

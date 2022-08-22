@@ -1,11 +1,10 @@
 {
 	"name": "@nuogz/utility",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "simple utility library for node.js and browser",
 	"author": "Nuogz",
 	"license": "LGPL-3.0-or-later",
-	"main": "./index.node.js",
-	"browser": "./index.browser.js",
+	"main": "./index.js",
 	"type": "module",
 	"typesSource": [
 		"browser",
