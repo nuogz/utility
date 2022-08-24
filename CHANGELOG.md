@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v1.2.1 - 2022.08.24 15
+* improve package info
+* improve `.eslintrc.cjs` for lint better
+* move files for lint better
+
+
 ## v1.2.0 - 2022.08.22 15
 * update `brop`
 * add `toCSSLength`
