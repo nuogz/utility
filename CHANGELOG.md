@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.3.0 - 2022.08.25 18
+* improve `copyJSON` support to handle `BigInt` by `json-bigint`
+
+
 ## v1.2.1 - 2022.08.24 15
 * improve package info
 * improve `.eslintrc.cjs` for lint better
