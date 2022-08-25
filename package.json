@@ -17,10 +17,10 @@
 	"engines": {
 		"node": ">=14.18.1"
 	},
-	"main": "./index.js",
+	"main": "index.js",
 	"files": [
-		"./index.js",
-		"./src/**"
+		"index.js",
+		"src/**"
 	],
 	"devDependencies": {
 		"eslint": "^8.22.0"
