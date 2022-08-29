@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.3.1 - 2022.08.30 01
+* add `sideEffects` to `package.json`
+* bump up dependencies
+
+
 ## v1.3.0 - 2022.08.25 18
 * improve `copyJSON` support to handle `BigInt` by `json-bigint`
 
