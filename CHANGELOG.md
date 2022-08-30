@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.3.2 - 2022.08.30 11
+* fix import `json-bigint` when `copyJSON` 
+
+
 ## v1.3.1 - 2022.08.30 01
 * add `sideEffects` to `package.json`
 * bump up dependencies
