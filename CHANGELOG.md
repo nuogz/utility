@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.3.3 - 2022.08.31 11
+* use `@nuogz/json-bigint` instead `json-bigint` in `copyJSON`
+
+
 ## v1.3.2 - 2022.08.30 11
 * fix import `json-bigint` when `copyJSON` 
 

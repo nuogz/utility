@@ -1,17 +1,8 @@
-import * as JSONBigint from 'json-bigint';
+import { parse, stringify } from '@nuogz/json-bigint';
 
 
 
-const JSONBigintNative = (typeof JSONBigint == 'function' ? JSONBigint : JSONBigint.default)({ useNativeBigInt: true });
-
-const copyJSON = object => {
-	try {
-		return JSON.parse(JSON.stringify(object));
-	}
-	catch(error) {
-		return JSONBigintNative.parse(JSONBigintNative.stringify(object));
-	}
-};
+const copyJSON = (object, optionParse) => parse(stringify(object), undefined, optionParse);
 
 
 

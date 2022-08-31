@@ -1,6 +1,6 @@
 {
 	"name": "@nuogz/utility",
-	"version": "1.3.2",
+	"version": "1.3.3",
 	"description": "simple utility library for node.js and browser",
 	"author": "Nuogz",
 	"license": "LGPL-3.0-or-later",
@@ -27,6 +27,6 @@
 		"eslint": "^8.23.0"
 	},
 	"dependencies": {
-		"json-bigint": "^1.0.0"
+		"@nuogz/json-bigint": "^1.0.0"
 	}
 }
