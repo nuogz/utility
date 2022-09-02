@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.4.0 - 2022.09.02 17
+* add `readPackage`
+* add `getSafe`
+
+
 ## v1.3.3 - 2022.08.31 11
 * use `@nuogz/json-bigint` instead `json-bigint` in `copyJSON`
 
