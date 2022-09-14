@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.4.1 - 2022.09.15 01
+* try to improve package export
+
+
 ## v1.4.0 - 2022.09.02 17
 * add `readPackage`
 * add `getSafe`

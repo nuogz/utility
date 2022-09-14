@@ -1,6 +1,6 @@
 {
 	"name": "@nuogz/utility",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"description": "Utility library for Node and modern browser",
 	"author": "Nuogz",
 	"license": "LGPL-3.0-or-later",
@@ -18,13 +18,17 @@
 		"node": ">=14.18.1"
 	},
 	"sideEffects": false,
-	"main": "index.js",
+	"main": "./index.js",
+	"browser": {
+		"./index.js": "./index.web.js"
+	},
 	"files": [
 		"index.js",
+		"index.web.js",
 		"src/**"
 	],
 	"devDependencies": {
-		"eslint": "^8.23.0"
+		"eslint": "^8.23.1"
 	},
 	"dependencies": {
 		"@nuogz/json-bigint": "^1.0.0"
