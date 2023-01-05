@@ -28,7 +28,7 @@
 		"src/**"
 	],
 	"devDependencies": {
-		"eslint": "^8.23.1"
+		"eslint": "^8.31.0"
 	},
 	"dependencies": {
 		"@nuogz/json-bigint": "^1.0.0"
