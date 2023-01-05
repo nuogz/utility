@@ -1,14 +1,16 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@nuogz/json-bigint': ^1.0.0
+  '@nuogz/json-bigint': ^1.0.7
   eslint: ^8.31.0
+  typescript: ^4.9.4
 
 dependencies:
-  '@nuogz/json-bigint': 1.0.0
+  '@nuogz/json-bigint': 1.0.7
 
 devDependencies:
   eslint: 8.31.0
+  typescript: 4.9.4
 
 packages:
 
@@ -70,8 +72,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@nuogz/json-bigint/1.0.0:
-    resolution: {integrity: sha512-QNFiqkLWkitdAAE28hNTARS+jeG8D0/gDnXlHJN5mObUYlJS6rCyzylcwJUDoSt3SYUiz0MfruqqkZ1nP9h4xw==}
+  /@nuogz/json-bigint/1.0.7:
+    resolution: {integrity: sha512-fgBWalk10nvhnj9HArasSzlOZuaQxoAa4RBnIBjpMTo1hs5sxOoBIA5horBxMhlQJ4ZQiatBAcnZyukWfF4zUA==}
     engines: {node: '>=14.18.1'}
     dev: false
 
@@ -625,6 +627,12 @@ packages:
   /type-fest/0.20.2:
     resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}
     engines: {node: '>=10'}
+    dev: true
+
+  /typescript/4.9.4:
+    resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: true
 
   /uri-js/4.4.1:

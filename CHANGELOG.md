@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.5.1 - 2023.01.05 16
+* add declaration files
+* bump up dependencies
+
+
 ## v1.5.0 - 2023.01.05 10
 * add `injectBaseLogger`
 
