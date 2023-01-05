@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.5.0 - 2023.01.05 10
+* add `injectBaseLogger`
+
+
 ## v1.4.1 - 2022.09.15 01
 * try to improve package export
 
