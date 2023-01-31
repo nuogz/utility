@@ -33,8 +33,8 @@
 		"emitDeclarationBrowser": "tsc ./index.web.js --declaration --emitDeclarationOnly --allowJs"
 	},
 	"devDependencies": {
-		"eslint": "^8.31.0",
-		"typescript": "^4.9.4"
+		"eslint": "^8.33.0",
+		"typescript": "^4.9.5"
 	},
 	"dependencies": {
 		"@nuogz/json-bigint": "^1.0.7"
