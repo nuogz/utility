@@ -1,2 +1,5 @@
 export default readPackage;
-declare function readPackage(file: any): any;
+/**
+ * @param {string} file
+ */
+declare function readPackage(file: string): any;

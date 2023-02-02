@@ -1,7 +1,9 @@
 import { readFileSync } from 'fs';
 
 
-
+/**
+ * @param {string} file
+ */
 const readPackage = file => {
 	let PKG;
 

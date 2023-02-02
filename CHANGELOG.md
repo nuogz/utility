@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.6.0 - 2023.02.02 14
+* half restruct `injectBaseLogger`
+
+
 ## v1.5.1 - 2023.01.05 16
 * add declaration files
 * bump up dependencies

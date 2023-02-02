@@ -1,18 +1,27 @@
 /**
- * @callback SingleLogFunction
+ * @callback SingleLoggerNamed
  * @param {string} level
  * @param {string} nameLog
  * @param {...any} data
  */
-
 /**
- * @callback LogFunction
- * @param {string} nameLog
+ * @callback SingleLogger
+ * @param {string} level
  * @param {...any} data
  */
 
 /**
- * @typedef {Object} LogFunctions
+ * @callback LoggerNamed
+ * @param {string} nameLog
+ * @param {...any} data
+ */
+/**
+ * @callback Logger
+ * @param {...any} data
+ */
+
+/**
+ * @typedef {Object} Logger
  * @property {LogFunction} trace
  * @property {LogFunction} debug
  * @property {LogFunction} info
@@ -24,103 +33,65 @@
 
 
 /**
- * @typedef {Object} LogOption
- * @property {string} name
- * @property {(false|null)|SingleLogFunction|LogFunctions} logger
+ * @typedef {Object} LoggerOption
+ * @property {string} [name]
+ * @property {boolean} [useNameLog=true]
+ * @property {SingleLoggerNamed|SingleLogger|LoggerNamed|Logger} [logger]
+ * @property {string[]} [keysFallback=['info', 'log']]
  */
 
 
+
+const levels = [
+	'trace',
+	'debug',
+	'info',
+	'error',
+	'warn',
+	'fatal',
+	'mark',
+];
+
+
+const symbolSelf = Symbol('self');
 const loggerClose = () => { };
+
+const getLogger = (target, useNameLog, logger, level, symbol) =>
+	!level
+		? loggerClose
+		: symbol === symbolSelf
+			? useNameLog
+				? (...params) => logger(level, target.nameLog, ...params)
+				: (...params) => logger(level, ...params)
+			: useNameLog
+				? (...params) => logger[level](target.nameLog, ...params)
+				: (...params) => logger[level](...params);
+
 
 
 /**
  * @param {Object} target
- * @param {LogOption} [option={}]
+ * @param {LoggerOption} [option={}]
  */
 export default function injectBaseLogger(target, option = {}) {
-	target.nameLog = option.name ?? target.name ?? '';
+	const { name, useNameLog = true, logger, keysFallback = ['info', 'log'] } = option;
 
-	const { logger } = option;
 
-	// close log
-	if(logger === false) {
-		target.logTrace = loggerClose;
-		target.logDebug = loggerClose;
-		target.logInfo = loggerClose;
-		target.logError = loggerClose;
-		target.logWarn = loggerClose;
-		target.logFatal = loggerClose;
-		target.logMark = loggerClose;
-	}
-	// log by single function
-	else if(typeof logger == 'function') {
-		target.logTrace = (...params) => logger('trace', target.nameLog, ...params);
-		target.logDebug = (...params) => logger('debug', target.nameLog, ...params);
-		target.logInfo = (...params) => logger('info', target.nameLog, ...params);
-		target.logError = (...params) => logger('error', target.nameLog, ...params);
-		target.logWarn = (...params) => logger('warn', target.nameLog, ...params);
-		target.logFatal = (...params) => logger('fatal', target.nameLog, ...params);
-		target.logMark = (...params) => logger('mark', target.nameLog, ...params);
-	}
-	// level-based log
-	else {
-		const csl = globalThis?.console ?? global.console ?? console;
+	if(useNameLog) { target.nameLog = name ?? target.name ?? ''; }
 
-		target.logTrace =
-			typeof logger?.trace == 'function'
-				? (...params) => logger.trace(target.nameLog, ...params)
-				: (
-					typeof csl.trace == 'function'
-						? (...params) => csl.trace(target.nameLog, ...params)
-						: (...params) => csl.log(target.nameLog, ...params)
-				);
-		target.logDebug =
-			typeof logger?.debug == 'function'
-				? (...params) => logger.debug(target.nameLog, ...params)
-				: (
-					typeof csl.debug == 'function'
-						? (...params) => csl.debug(target.nameLog, ...params)
-						: (...params) => csl.log(target.nameLog, ...params)
-				);
-		target.logInfo =
-			typeof logger?.info == 'function'
-				? (...params) => logger.info(target.nameLog, ...params)
-				: (
-					typeof csl.info == 'function'
-						? (...params) => csl.info(target.nameLog, ...params)
-						: (...params) => csl.log(target.nameLog, ...params)
-				);
-		target.logError =
-			typeof logger?.error == 'function'
-				? (...params) => logger.error(target.nameLog, ...params)
-				: (
-					typeof csl.error == 'function'
-						? (...params) => csl.error(target.nameLog, ...params)
-						: (...params) => csl.log(target.nameLog, ...params)
-				);
-		target.logWarn =
-			typeof logger?.warn == 'function'
-				? (...params) => logger.warn(target.nameLog, ...params)
-				: (
-					typeof csl.warn == 'function'
-						? (...params) => csl.warn(target.nameLog, ...params)
-						: (...params) => csl.log(target.nameLog, ...params)
-				);
-		target.logFatal =
-			typeof logger?.fatal == 'function'
-				? (...params) => logger.fatal(target.nameLog, ...params)
-				: (
-					typeof csl.error == 'function'
-						? (...params) => csl.error(target.nameLog, ...params)
-						: (...params) => csl.log(target.nameLog, ...params)
-				);
-		target.logMark =
-			typeof logger?.mark == 'function'
-				? (...params) => logger.mark(target.nameLog, ...params)
-				: (
-					typeof csl.info == 'function'
-						? (...params) => csl.info(target.nameLog, ...params)
-						: (...params) => csl.log(target.nameLog, ...params)
-				);
+
+	const keyFallback = logger ? keysFallback?.find(key => typeof logger?.[key] == 'function') : null;
+
+
+	for(const level of levels) {
+		const keyLog = `log${level.replace(/^\w/, c => c.toUpperCase())}`;
+
+		target[keyLog] = !logger
+			? loggerClose
+			: getLogger(target, useNameLog, logger,
+				...typeof logger == 'function' ? [level, symbolSelf]
+					: typeof logger[level] == 'function' ? [level]
+						: [keyFallback]
+			);
 	}
 }
