@@ -3,32 +3,41 @@
  * @param {string} level
  * @param {string} nameLog
  * @param {...any} data
+ * @returns {void}
  */
 /**
  * @callback SingleLogger
  * @param {string} level
  * @param {...any} data
+ * @returns {void}
  */
 
 /**
- * @callback LoggerNamed
+ * @callback LevelLoggerNamed
  * @param {string} nameLog
  * @param {...any} data
+ * @returns {void}
  */
 /**
- * @callback Logger
+ * @callback LevelLogger
  * @param {...any} data
+ * @returns {void}
  */
 
 /**
- * @typedef {Object} Logger
- * @property {LogFunction} trace
- * @property {LogFunction} debug
- * @property {LogFunction} info
- * @property {LogFunction} warn
- * @property {LogFunction} error
- * @property {LogFunction} fatal
- * @property {LogFunction} mark
+ * @typedef {SingleLoggerNamed|SingleLogger|LevelLoggerNamed|LevelLogger} LoggerLike
+ */
+
+
+/**
+ * @typedef {Object} LoggerMap
+ * @property {LevelLoggerNamed|LevelLogger} [trace]
+ * @property {LevelLoggerNamed|LevelLogger} [debug]
+ * @property {LevelLoggerNamed|LevelLogger} [info]
+ * @property {LevelLoggerNamed|LevelLogger} [warn]
+ * @property {LevelLoggerNamed|LevelLogger} [error]
+ * @property {LevelLoggerNamed|LevelLogger} [fatal]
+ * @property {LevelLoggerNamed|LevelLogger} [mark]
  */
 
 
@@ -36,7 +45,7 @@
  * @typedef {Object} LoggerOption
  * @property {string} [name]
  * @property {boolean} [useNameLog=true]
- * @property {SingleLoggerNamed|SingleLogger|LoggerNamed|Logger} [logger]
+ * @property {SingleLoggerNamed|SingleLogger|LoggerMap} [logger]
  * @property {string[]} [keysFallback=['info', 'log']]
  */
 
@@ -54,6 +63,7 @@ const levels = [
 
 
 const symbolSelf = Symbol('self');
+
 const loggerClose = () => { };
 
 const getLogger = (target, useNameLog, logger, level, symbol) =>
