@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v1.6.2 - 2023.03.07 17
+* bump up dependencies
+
+
+## v1.6.1 - 2023.02.02 14
+* fix `injectBaseLogger.d.ts`
+
+
 ## v1.6.1 - 2023.02.02 14
 * fix `injectBaseLogger.d.ts`
 
