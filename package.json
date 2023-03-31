@@ -1,7 +1,7 @@
 {
 	"name": "@nuogz/utility",
-	"version": "1.6.2",
-	"description": "Utility library for Node and modern browser",
+	"version": "1.6.3",
+	"description": "utility library for Node.js and modern browser",
 	"author": "Nuogz",
 	"license": "LGPL-3.0-or-later",
 	"repository": {
@@ -33,10 +33,10 @@
 		"emitDeclarationBrowser": "tsc ./index.web.js --declaration --emitDeclarationOnly --allowJs"
 	},
 	"devDependencies": {
-		"eslint": "^8.35.0",
+		"eslint": "^8.37.0",
 		"typescript": "^4.9.5"
 	},
 	"dependencies": {
-		"@nuogz/json-bigint": "^1.1.0"
+		"@nuogz/json-bigint": "^1.2.0"
 	}
 }
