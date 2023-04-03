@@ -12,7 +12,11 @@
 			"cwd": "${fileDirname}",
 			"runtimeExecutable": "node.exe",
 			"program": "${fileBasename}",
-			"args": []
+			"args": [],
+			"env": {
+				"NENV_I18N_LOCALE": "zh",
+				"NENV_I18N_FORMAT": "hades",
+			}
 		}
 	]
 }

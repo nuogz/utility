@@ -1,6 +1,6 @@
 {
 	"name": "@nuogz/utility",
-	"version": "1.6.3",
+	"version": "1.6.4",
 	"description": "utility library for Node.js and modern browser",
 	"author": "Nuogz",
 	"license": "LGPL-3.0-or-later",
@@ -37,6 +37,6 @@
 		"typescript": "^4.9.5"
 	},
 	"dependencies": {
-		"@nuogz/json-bigint": "^1.2.0"
+		"@nuogz/json-bigint": "^1.2.1"
 	}
 }
