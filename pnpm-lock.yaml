@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@nuogz/json-bigint':
-    specifier: ^1.2.1
-    version: 1.2.1
+    specifier: ^1.2.2
+    version: 1.2.2
 
 devDependencies:
   eslint:
@@ -107,8 +107,8 @@ packages:
       i18next: 22.4.14
     dev: false
 
-  /@nuogz/json-bigint@1.2.1:
-    resolution: {integrity: sha512-OzOHgyabq+xQFodoz4N/zO5SbvE+4xxISwLBHCBqGSgfkD7nEQjDMqfd+k8LJxkVFoL18q4yzhD7URMVNrH4dg==}
+  /@nuogz/json-bigint@1.2.2:
+    resolution: {integrity: sha512-vmDtU9btztNv33Jfw78lrgahlw/RQ4b8VmncxwDuXoob5gdts2hyOM1DwMVlG71Zx1Tj5ij2k2vflBFFvPfSlw==}
     engines: {node: '>=14.18.1'}
     dependencies:
       '@nuogz/i18n': 3.1.0
