@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.6.6 - 2023.05.19 17
+* add `copy-json.web.js` to avoid import `i18n` when building webpage
+
+
 ## v1.6.5 - 2023.04.07 11
 * bump up dependencies
 

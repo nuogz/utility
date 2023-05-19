@@ -1,6 +1,6 @@
 {
 	"name": "@nuogz/utility",
-	"version": "1.6.5",
+	"version": "1.6.6",
 	"description": "utility library for Node.js and modern browser",
 	"author": "Nuogz",
 	"license": "LGPL-3.0-or-later",
