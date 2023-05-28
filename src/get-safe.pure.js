@@ -1,7 +1,15 @@
 /**
+ * @typedef {Object} GetInfo
+ * @property {any} value
+ * @property {any} parent
+ * @property {string} key
+ */
+
+
+/**
  * @param {any} object
  * @param {string} path split by `.`
- * @returns {({ value: any, parent: any, key: string } | undefined)}
+ * @returns {GetInfo | undefined}
  */
 const getSafe = (value, path = '') => {
 	let key;

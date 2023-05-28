@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v1.7.0 - 2023.05.29 01
+* (break) remove outdated `parseBoolAttr`. `brop` is better.
+* bump up dependencies
+	* update `@nuogz/i18n` to `v1.3.0` to properly support browser build
+	* update `typescript` to `v5.x`, and renew jsdoc
+* use eslint flat config, and related config udpate
+	* use `eslint.config.js` instead `eslintrc.cjs`
+	* renew file struct to suit new eslint flat config
+
+
 ## v1.6.6 - 2023.05.19 17
 * add `copy-json.web.js` to avoid import `i18n` when building webpage
 
