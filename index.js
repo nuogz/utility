@@ -5,10 +5,5 @@ export { default as injectBaseLogger } from './src/inject-base-logger.pure.js';
 export { default as randomString } from './src/random-string.pure.js';
 
 
-// browser
-export { default as brop } from './src/brop.pure.js';
-export { default as toCSSLength } from './src/to-css-length.pure.js';
-
-
 // node
 export { default as readPackage } from './src/read-package.lib.js';

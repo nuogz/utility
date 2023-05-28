@@ -18,6 +18,9 @@
 	},
 	"sideEffects": false,
 	"main": "./index.js",
+	"browser": {
+		"./index.js": "./src/index.js"
+	},
 	"files": [
 		"index.js",
 		"src/**",
