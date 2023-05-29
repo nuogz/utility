@@ -1,9 +1,9 @@
 /**
- * used to convert data to switch like boolean HTML attribute
- * @param {}
+ * convert data into boolean HTML attribute
+ * @param {any} brop
  * @return {'' | undefined}
  */
-export const brop = value => value ? '' : undefined;
+const brop = value => value ? '' : undefined;
 
 
 

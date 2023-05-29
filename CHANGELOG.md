@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.7.1 - 2023.05.29 01
+* (new) restuct `parseBoolAttr` into `bropBoolean`
+* improve jsdoc
+
+
 ## v1.7.0 - 2023.05.29 01
 * (break) remove outdated `parseBoolAttr`. `brop` is better.
 * bump up dependencies
