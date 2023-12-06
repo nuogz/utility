@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.8.1 - 2023.12.06 14
+* tweak `package.json`
+
+
 ## v1.8.0 - 2023.12.06 14
 * tweak enviroment
 * bump up dependencies
