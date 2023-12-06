@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.8.0 - 2023.12.06 14
+* tweak enviroment
+* bump up dependencies
+
+
 ## v1.7.1 - 2023.05.29 01
 * (new) restuct `parseBoolAttr` into `bropBoolean`
 * improve jsdoc
