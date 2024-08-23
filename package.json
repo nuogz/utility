@@ -1,12 +1,12 @@
 {
 	"name": "@nuogz/utility",
-	"version": "1.8.1",
-	"description": "utility library for Node.js and modern browser",
+	"version": "1.8.2",
+	"description": "Utility library for Node.js and modern browser",
 	"author": "DanoR",
 	"license": "LGPL-3.0-or-later",
 	"repository": {
 		"type": "git",
-		"url": "github:nuogz/utility"
+		"url": "git+https://github.com/nuogz/utility.git"
 	},
 	"private": false,
 	"type": "module",
@@ -16,7 +16,7 @@
 	],
 	"sideEffects": false,
 	"engines": {
-		"node": ">=14.18.1"
+		"node": ">=20"
 	},
 	"main": "./index.js",
 	"browser": {
@@ -25,19 +25,21 @@
 	"files": [
 		"index.js",
 		"src/**",
-		"**/*.d.ts"
+		"types/**"
 	],
-	"typings": "./index.d.ts",
+	"typings": "./types/index.d.ts",
 	"scripts": {
-		"emitNodeDeclaration": "tsc ./index.js --declaration --emitDeclarationOnly --moduleResolution bundler --module esnext --target esnext --experimentalDecorators --strict --allowJs --jsx preserve",
-		"emitBrowserDeclaration": "tsc ./src/index.js --declaration --emitDeclarationOnly --moduleResolution bundler --module esnext --target esnext --experimentalDecorators --strict --allowJs --jsx preserve"
+		"declare": "tsc"
 	},
-	"dependencies": {},
 	"devDependencies": {
-		"eslint": "^8.55.0",
-		"typescript": "^5.3.2"
+		"@eslint/js": "^9.9.0",
+		"@stylistic/eslint-plugin-js": "^2.6.4",
+		"@types/node": "20",
+		"eslint": "^9.9.0",
+		"globals": "^15.9.0",
+		"typescript": "^5.5.4"
 	},
 	"peerDependencies": {
-		"@nuogz/json-bigint": "^1.3.1"
+		"@nuogz/json-bigint": "^1.4.0"
 	}
 }

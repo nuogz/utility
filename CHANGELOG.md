@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v1.8.2 - 2024.08.23 15
+* docs: renew types
+* deps: bump up dependencies
+* chore: renew develop environments
+
+
 ## v1.8.1 - 2023.12.06 14
 * tweak `package.json`
 

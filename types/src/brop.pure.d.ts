@@ -4,4 +4,4 @@ export default brop;
  * @param {any} brop
  * @return {'' | undefined}
  */
-declare function brop(value: any): '' | undefined;
+declare function brop(value: any): "" | undefined;
